@@ -14,6 +14,14 @@ config/name="OnionGame"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[file_customization]
+
+folder_colors={
+"res://Assets/": "green",
+"res://Scenes/": "red",
+"res://Scripts/": "blue"
+}
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
