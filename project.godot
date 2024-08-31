@@ -10,12 +10,6 @@ config_version=5
 
 [application]
 
-<<<<<<< HEAD
-config/name="OnionGme"
-config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
-
-=======
 config/name="OnionGame"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -28,7 +22,6 @@ folder_colors={
 "res://Scripts/": "blue"
 }
 
->>>>>>> 5fc20c9917db001f48ac905a1e5bb6ebe27752bc
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
