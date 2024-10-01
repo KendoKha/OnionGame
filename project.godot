@@ -22,6 +22,10 @@ folder_colors={
 "res://Scripts/": "blue"
 }
 
+[layer_names]
+
+2d_physics/layer_1="Terrain"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
