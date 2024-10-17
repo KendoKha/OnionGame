@@ -303,7 +303,7 @@ script = ExtResource("1_8dlgw")
 [node name="Animator" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_mfd77")
 animation = &"double_jump"
-frame_progress = 0.165617
+frame_progress = 0.31516
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5)
