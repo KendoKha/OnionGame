@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://vdac2kyq3n5p"
+path="res://.godot/imported/Juhani Junkala [Chiptune Adventures] 1. Stage 1.wav-df8d2d680ff82aa1f585e6a49a193e16.sample"
+
+[deps]
+
+source_file="res://Assets/PixelAdventure/Music/Juhani Junkala [Chiptune Adventures] 1. Stage 1.wav"
+dest_files=["res://.godot/imported/Juhani Junkala [Chiptune Adventures] 1. Stage 1.wav-df8d2d680ff82aa1f585e6a49a193e16.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
