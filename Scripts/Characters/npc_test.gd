@@ -1,25 +1,34 @@
 extends CharacterBody2D
 
+const DIALOG := ["¿Te importa? \nEstoy esperando a un amigo", 
+				 "Tu no eres una cebolla, ¿verdad?"]
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+var interactive := false
+var index := 0
 
+func _ready() -> void:
+	pass
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	pass
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+func _input(event: InputEvent) -> void:
+	if interactive and event.is_action_pressed("Interact"):
+		%TextLabel.visible = true
+		%interactive_button.visible = false
+		
+		if index <= DIALOG.size()-1: 
+			%TextLabel.text = DIALOG[index]
+			index+=1
+		else:
+			index -= 1
+			%TextLabel.visible = false
+			%interactive_button.visible = true
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+func _on_talk_area_area_entered(area: Area2D) -> void:
+	interactive = true
+	%interactive_button.visible = true
 
-	move_and_slide()
+func _on_talk_area_area_exited(area: Area2D) -> void:
+	interactive = false
+	%interactive_button.visible = false

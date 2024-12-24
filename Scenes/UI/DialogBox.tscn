@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://b873xoj1qpmrk"]
+
+[ext_resource type="FontFile" uid="uid://cjejl8rpb6qnh" path="res://Assets/Enviroment/Fonts/Early GameBoy.ttf" id="1_nwqax"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_swmkf"]
+bg_color = Color(0.708677, 0.48692, 0.720211, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_left = 12
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_apy1w"]
+font = ExtResource("1_nwqax")
+font_size = 10
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[node name="TextLabel" type="Label"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_swmkf")
+label_settings = SubResource("LabelSettings_apy1w")

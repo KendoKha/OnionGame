@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://buxb08hf2l10c"]
+[gd_scene load_steps=47 format=3 uid="uid://buxb08hf2l10c"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/player.gd" id="1_8dlgw"]
 [ext_resource type="Texture2D" uid="uid://co4dv11sbf5q2" path="res://Assets/PixelAdventure/Main Characters/Ninja Frog/Idle (32x32).png" id="1_8gdc0"]
@@ -294,19 +294,29 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xvk8j"]
-radius = 8.0
-height = 18.0
+radius = 12.0
+height = 32.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q18oj"]
+size = Vector2(60, 35)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_8dlgw")
 
 [node name="Animator" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_mfd77")
-animation = &"double_jump"
-frame_progress = 0.31516
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 5)
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_xvk8j")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="InteractArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_q18oj")

@@ -32,21 +32,18 @@ func can_jump() -> bool:
 	else:
 		return false
 	
-	
-		
 func _physics_process(delta: float) -> void:
-
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	if is_on_floor():
 		jump_counter = 0
 
 #aquí se gestiona el salto (en el if de abajo xd)
-	if Input.is_action_just_pressed("ui_accept") and can_jump(): 
+	if Input.is_action_just_pressed("Jump") and can_jump(): 
 		velocity.y = JUMP_VELOCITY
 		jump_counter += 1
 
-	var direction := Input.get_axis("ui_left", "ui_right")
+	var direction := Input.get_axis("Left", "Right")
 	if direction:
 		velocity.x = direction * SPEED
 	else:
