@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://pvqiphk46271"]
+[gd_scene load_steps=7 format=4 uid="uid://pvqiphk46271"]
 
 [ext_resource type="Texture2D" uid="uid://dxe8oggd2h4gs" path="res://Assets/Enviroment/TestTerrain/Terrain (16x16).png" id="1_8jiqi"]
 [ext_resource type="PackedScene" uid="uid://buxb08hf2l10c" path="res://Scenes/Characters/player.tscn" id="2_dsw7b"]
 [ext_resource type="PackedScene" uid="uid://drqlw6mfh861g" path="res://Scenes/Characters/npc_test.tscn" id="3_5ldsu"]
+[ext_resource type="PackedScene" uid="uid://dwlaby4vqjcqm" path="res://Scenes/Characters/npc_test_2.tscn" id="4_pwk0q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7gpaf"]
 texture = ExtResource("1_8jiqi")
@@ -225,3 +226,6 @@ position = Vector2(555, -257)
 
 [node name="NPC_test" parent="." instance=ExtResource("3_5ldsu")]
 position = Vector2(645, -258)
+
+[node name="NPC_test_2" parent="." instance=ExtResource("4_pwk0q")]
+position = Vector2(458, -65)

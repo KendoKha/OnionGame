@@ -22,9 +22,8 @@ shadow_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_apy1w"]
 font = ExtResource("1_nwqax")
 font_size = 10
-shadow_size = 5
 shadow_color = Color(0, 0, 0, 1)
-shadow_offset = Vector2(2, 2)
+shadow_offset = Vector2(2, 1)
 
 [node name="TextLabel" type="Label"]
 anchors_preset = 3
@@ -37,4 +36,6 @@ offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_swmkf")
+text = "
+"
 label_settings = SubResource("LabelSettings_apy1w")
