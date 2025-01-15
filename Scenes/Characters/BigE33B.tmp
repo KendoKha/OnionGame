@@ -1,6 +1,6 @@
 [gd_scene load_steps=47 format=3 uid="uid://buxb08hf2l10c"]
 
-[ext_resource type="Script" path="res://Scripts/Characters/player.gd" id="1_8dlgw"]
+[ext_resource type="Script" path="res://Scripts/Characters/BigOnion.gd" id="1_8dlgw"]
 [ext_resource type="Texture2D" uid="uid://co4dv11sbf5q2" path="res://Assets/PixelAdventure/Main Characters/Ninja Frog/Idle (32x32).png" id="1_8gdc0"]
 [ext_resource type="Texture2D" uid="uid://khw0ddgcldrh" path="res://Assets/PixelAdventure/Main Characters/Ninja Frog/Double Jump (32x32).png" id="2_jo6w0"]
 [ext_resource type="Texture2D" uid="uid://dhaaft4lele3d" path="res://Assets/PixelAdventure/Main Characters/Ninja Frog/Fall (32x32).png" id="3_0mssr"]
@@ -294,7 +294,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xvk8j"]
-radius = 12.0
+radius = 11.0
 height = 26.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q18oj"]
@@ -313,6 +313,7 @@ position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_xvk8j")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 
 [node name="InteractArea" type="Area2D" parent="."]
 collision_layer = 2
@@ -321,3 +322,6 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_q18oj")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(12, 0)
